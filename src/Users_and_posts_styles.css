@@ -1,0 +1,203 @@
+a {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500; }
+    a:hover {
+      color: black; }
+  
+  * {
+    box-sizing: border-box; }
+  
+  .modal-label {
+    display: block; }
+  
+  #new-post-title {
+    width: 100%; }
+  
+  #new-post-text {
+    width: 100%; }
+  
+  .user-card-container {
+    margin: 25px 35px;
+    width: 330px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center; }
+    .user-card-container .user-status-informer {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      right: 15px; }
+    .user-card-container .user-status-informer-green {
+      background-color: #02bd02; }
+    .user-card-container .user-status-informer-red {
+      background-color: red; }
+    .user-card-container .user-photo {
+      margin-top: 15px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; }
+    .user-card-container h3.username {
+      padding: 8px 0px;
+      font-size: 24px;
+      font-weight: bold; }
+    .user-card-container h4.name {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 4px 0px; }
+    .user-card-container .email-info-container {
+      display: flex;
+      justify-content: center;
+      align-items: baseline; }
+      .user-card-container .email-info-container .email-text {
+        padding-right: 10px;
+        font-size: 14px;
+        color: gray;
+        font-weight: 200; }
+      .user-card-container .email-info-container a.email {
+        font-size: 16px;
+        font-weight: 500; }
+        .user-card-container .email-info-container a.email:hover {
+          color: #5d5d5d !important; }
+    .user-card-container .catch-phrase {
+      font-size: 16px;
+      background-color: rgba(150, 108, 248, 0.568);
+      padding: 4px 1px;
+      padding-bottom: 6px;
+      border-radius: 15px;
+      text-transform: lowercase; }
+    .user-card-container .catch-phrase-display-none {
+      display: none; }
+    .user-card-container .company-name-container {
+      display: flex;
+      justify-content: center;
+      align-items: baseline; }
+      .user-card-container .company-name-container .company-key {
+        padding-right: 10px;
+        font-size: 14px;
+        color: gray;
+        font-weight: 200; }
+      .user-card-container .company-name-container .company-name {
+        font-size: 16px;
+        font-weight: 500; }
+    .user-card-container .company-name-container-display-none {
+      display: none; }
+    .user-card-container .view-profile-button-block .dividing-container {
+      margin-top: 10px;
+      border-top: 1px solid black; }
+    .user-card-container .view-profile-button-block .view-profile-button {
+      padding-top: 15px;
+      width: 100%;
+      border: none;
+      background: none;
+      font-weight: 300; }
+      .user-card-container .view-profile-button-block .view-profile-button:hover {
+        color: #6e6e6e; }
+    .user-card-container .view-profile-button-block-display-none {
+      display: none; }
+  
+  .post-card {
+    margin: 40px 0px;
+    width: 550px; }
+    .post-card .card-body {
+      border: 1px solid black;
+      border-top: none;
+      height: 205px; }
+      .post-card .card-body .card-text {
+        font-size: 16px; }
+  
+  .all-users-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: whitesmoke; }
+  
+  .user-profile-container {
+    position: relative; }
+    .user-profile-container .user-info-container {
+      margin-bottom: 40px;
+      position: relative;
+      width: 600px;
+      min-height: 120px;
+      margin-left: 60px;
+      text-align: left;
+      border: 1px solid black;
+      padding: 0 20px; }
+      .user-profile-container .user-info-container .user-photo {
+        margin-top: 5px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 5px; }
+      .user-profile-container .user-info-container .user-description {
+        font-size: 18px;
+        font-weight: normal; }
+    .user-profile-container h3.username {
+      padding: 8px 0px;
+      font-size: 24px;
+      font-weight: bold; }
+    .user-profile-container h4.name {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 4px 0px; }
+    .user-profile-container .email-info-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline; }
+      .user-profile-container .email-info-container .email-text {
+        padding-right: 10px;
+        font-size: 14px;
+        color: gray;
+        font-weight: 200; }
+      .user-profile-container .email-info-container a.email {
+        font-size: 16px;
+        font-weight: 500; }
+        .user-profile-container .email-info-container a.email:hover {
+          color: #5d5d5d !important; }
+    .user-profile-container .user-characterictics {
+      display: flex;
+      justify-content: space-evenly; }
+      .user-profile-container .user-characterictics h4.characterictics {
+        font-size: 16px;
+        background-color: rgba(150, 108, 248, 0.568);
+        padding: 3px 10px;
+        padding-bottom: 6px;
+        border-radius: 15px;
+        text-transform: lowercase; }
+    .user-profile-container .all-posts-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0px 60px; }
+    .user-profile-container .go-back-btn {
+      color: gray;
+      font-weight: thin;
+      font-size: 14px;
+      position: absolute;
+      top: 20px;
+      right: 60px;
+      padding: 2px 5px;
+      border: 1px solid black;
+      background: none; }
+  
+  .add-new-post-container {
+    width: 190px;
+    margin-left: 60px; }
+    .add-new-post-container .add-new-post-btn {
+      background-color: white;
+      border: none;
+      font-size: 20px;
+      font-weight: 300;
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 0px; }
+  .user-profile-container .loading-block {
+    position:absolute;
+    top:40px;
+    left: 100px;
+  }
