@@ -13,8 +13,7 @@ function App() {
           <Route exact path="/">
             <UsersPage/>
           </Route>
-          {/* <Route exact path="/user/:userId" component={UserProfilePage}> */}
-          <Route exact path="/user/:userId" render={UserProfilePage}> 
+          <Route exact path="/user/:userId" component={UserProfilePage}>
           </Route>
         </Switch>
       </div>
