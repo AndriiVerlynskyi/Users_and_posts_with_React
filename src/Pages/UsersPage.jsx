@@ -1,26 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import userDetails from '../Components/UserDetails';
+import React from 'react';
 import UsersList from '../Components/UsersList';
 // import PostsPage from ''
 
-const usersPage = function UsersPage() {
-    const [users, setUsers] = useState(null);
+const UsersPage = function UsersPage() {
 
-    useEffect(() => {
-      fetch('https://jsonplaceholder.typicode.com/users')      
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-            setUsers(data)
-        })
-    }, [])
-    
     return (
       <div>
-        {users && <UsersList users={users}/>}
+        <UsersList/>
       </div>
     )
 };
 
-export default usersPage
+export default UsersPage
