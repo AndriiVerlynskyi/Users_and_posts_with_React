@@ -1,11 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import {Modal, Button} from 'react-bootstrap';
+import { fetchPosts, fetchSavePost } from '../Redux/actions/fetchPosts';
+import { useDispatch } from 'react-redux'
 
 const AddNewPostBlock = function () {
     const [show, setShow] = useState(false);
     const [postTitle, setPostTitle] = useState(null);
     const [postBody, setPostBody] = useState(null);
     const [addPostButtonState, setAddPostButtonState] = useState(true)
+
+    
+    const dispatch = useDispatch();
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true);
@@ -14,6 +19,8 @@ const AddNewPostBlock = function () {
         if(!!postTitle && !!postBody){
             setShow(false);
         }
+        dispatch(fetchSavePost(post))
+        dispatch(fetchPosts())
     }
 
     useEffect(() => {
@@ -24,6 +31,18 @@ const AddNewPostBlock = function () {
         }
     }, [postTitle, postBody])
 
+
+    const [post, setPost] = useState({
+        postTitle,
+        postBody
+    });
+
+    useEffect( () => {
+        setPost({
+            postTitle,
+            postBody
+        })
+    }, [postTitle, postBody])
 
     return (
         <div className="add-new-post-container">

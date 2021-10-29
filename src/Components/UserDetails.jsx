@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchUsers } from '../Redux/actions/fetchUsers';
 import BackBtnBlock from './BackBtnBlock'
 
-const UserDetails = function UserDetails ({user}) {
+const UserDetails = ({userId}) => {
+    
+    // const usersFromState = useSelector( state => state.usersData.users);
+
+    // const user = usersFromState.find( user => {
+    //     return user.id === Number(userId)
+    // })
+    const dispatch = useDispatch()
+    dispatch(fetchUsers)
+
+    const user = useSelector( state => state.usersData.users[userId-1]);
+
     return (
         <div className="user-profile-container">
             <div className="user-info-container">
